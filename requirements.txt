@@ -1,0 +1,7 @@
+streamlit
+diffusers
+torch
+transformers
+beautifulsoup4
+requests
+opencv-python
