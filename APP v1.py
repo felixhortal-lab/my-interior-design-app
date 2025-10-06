@@ -1,8 +1,16 @@
 # ...existing code...
-from flask import Flask, render_template_string, request, jsonify, url_for
-from werkzeug.utils import secure_filename
-from PIL import Image, ImageEnhance, ImageFilter
-import os, io, time
+try:
+    from flask import Flask, render_template_string, request, jsonify, url_for
+    from werkzeug.utils import secure_filename
+    from PIL import Image, ImageEnhance, ImageFilter
+except Exception:
+    print("Dependency error: failed to import required packages. Install with:")
+    print("  python -m pip install Flask Pillow Werkzeug")
+    raise
+
+import os
+import io
+import time
 
 BASE_DIR = os.path.dirname(__file__)
 UPLOAD_DIR = os.path.join(BASE_DIR, "static", "uploads")
