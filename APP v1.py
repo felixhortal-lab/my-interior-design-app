@@ -4,7 +4,7 @@ from PIL import Image
 import io
 import time
 
-st.title("My Interior Design App")
+st.title("Redesign your house with one click")
 
 # Upload photo
 uploaded_file = st.file_uploader("Upload your room photo", type=["jpg", "jpeg", "png"])
